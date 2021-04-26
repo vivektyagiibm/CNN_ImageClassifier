@@ -55,7 +55,7 @@ class CNN(nn.Module):
         self.conv1 = nn.Conv2d(Ci, Co, (3,3))
         self.conv2 = nn.Conv2d(Co, Co, (3,3))
         self.conv3 = nn.Conv2d(Co, Co, (3,3))
-        self.fc1 = nn.Linear(32*4*4, C)
+        self.fc1 = nn.Linear(32*9*9, C)
     
     def forward(self, x):
         batch_size = x.shape[0]
@@ -67,7 +67,6 @@ class CNN(nn.Module):
         x = F.relu(self.conv2(x))
         #print(x.shape)
         x= F.relu(self.conv3(x))
-        x = F.max_pool2d(x, (2,2))
         #print(x.shape)
         x = x.view(batch_size,-1)
         #print(x.shape)
