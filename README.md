@@ -11,7 +11,9 @@ Primary motive of this simple CNN text classifier is to introduce ML engineers/s
 
 We perform classifical SGD by taking the gradients and updating the weights and run the traininng for fixed number of epochs (40), followed by testing on indepednent official test-set of Fashion-Mnist. 
 
-Accuracy: 87.87%
+Accuracy: 
+90.3% 3 layer CNN 
+90.8% 3 layer CNN with residual connection
 
  
 
